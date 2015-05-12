@@ -10,36 +10,22 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef MYSTRING
-# define MYSTRING
-# include <sys/types.h>
-# include <string.h>
-# include <stdlib.h>
+#ifndef MYFLOATS
+# define MYFLOATS
+# include <stdarg.h>
 # include <unistd.h>
+# include <stdlib.h>
 
-typedef struct		s_string
+# include <stdio.h>
+
+typedef struct		s_floats
 {
-	char			*str;
+	float			*values;
 	ssize_t			len;
-	char			safe;
-}					t_string;
+}					t_floats;
 
-
-t_string			newString(char *str);
-t_string			initString(char c, ssize_t len);
-void				destroyString(t_string *string);
-int					putString(t_string string);
-t_string			dupString(t_string string);
-ssize_t				lenString(t_string string);
-ssize_t				getlenString(t_string string);
-int					reduceString(t_string *string, ssize_t len);
-int					increaseString(t_string *string, ssize_t len);
-int					newlenString(t_string *string, ssize_t len);
-int					modifyString(t_string *string, ssize_t pos, char c);
-int					replaceString(t_string *string, char *str);
-int					superdebugString(t_string *string);
-int					debugString(t_string *string);
-int					safeString(t_string *string);
-int					unsafeString(t_string *string);
+t_floats	newFloats(int n, ...);
+void		putFloats(t_floats floats);
+void		destroyFloats(t_floats *floats);
 
 #endif

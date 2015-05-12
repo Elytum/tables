@@ -15,7 +15,8 @@ INCLUDE = ./includes/
 SRCPATH = ./srcs/
 CFLAGS = -Wall -Werror -Wextra
 C = \033[1;34m
-SRCS = Mystring.c
+SRCS = Mystring.c	\
+		Myfloats.c
 
 V = 0
 SILENCE_1 :=

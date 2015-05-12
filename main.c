@@ -1,6 +1,7 @@
 #include <Mystring.h>
+#include <Myfloats.h>
 
-void	test(void)
+void	test1(void)
 {
 	t_string	test;
 	char		*ptr;
@@ -15,8 +16,17 @@ void	test(void)
 	test.str = NULL;
 }
 
+void test2(void)
+{
+	t_floats floats;
+
+    floats = newFloats(2, 3.3f, 4.4f);
+    putFloats(floats);
+    destroyFloats(&floats);
+}
+
 int main(void)
 {
-	test();
+	test2();
 	while (1);
 }
